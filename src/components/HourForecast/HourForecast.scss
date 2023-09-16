@@ -1,0 +1,67 @@
+.hour-forecast-container {
+    min-width: 8rem;
+    height: 17rem;
+    background: linear-gradient(#ffffff03, #ffffff15);
+    border-radius: 5px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    display: grid;
+    grid-template-rows: 14.5rem 2.5rem;
+    cursor: pointer;
+
+    .hour-forecast {
+        padding: 15px;
+        box-sizing: border-box;
+        display: grid;
+        grid-template-rows: repeat(3, 1fr);
+
+        .temp-condition,
+        .humidity-wind {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .humidity-wind {
+            justify-content: flex-end;
+        }
+
+        img {
+            width: 3rem;
+        }
+
+        .temp {
+            font-size: 25px;
+        }
+        .condition{
+            font-size: 14px;
+            line-height: 16px;
+        }
+
+        .humidity {
+            margin-top: 8px;
+
+            i {
+                font-size: 14px;
+                color: rgba(255, 255, 255, 0.5);
+            }
+        }
+
+        .wind {
+            .wind-direction {
+                display: inline-block;
+            }
+        }
+    }
+
+    .time {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #323b47d2;
+        border-top: 1px solid #ffffff88;
+        font-weight: 500;
+        font-size: 18px;
+    }
+}

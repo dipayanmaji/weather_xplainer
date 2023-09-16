@@ -32,8 +32,8 @@ const CurrentWeather = () => {
 
             <section className="middle-section">
                 <div className="temp-condition">
-                    <img src={currentWeather.condition?.icon} />
-                    <div className="tempreture">{unit == "c" ? currentWeather.temp_c : currentWeather.temp_f}
+                    <img src={currentWeather.condition?.icon} title={currentWeather.condition?.text} />
+                    <div className="tempreture" title="Tempreture">{unit == "c" ? currentWeather.temp_c : currentWeather.temp_f}
                         <span className="unit-flip">
                             <span className="unit">°{unit == "c" ? "C" : "F"}</span>
                             <i className="fa-solid fa-repeat" title="Change unit" onClick={unitHandler}></i>
@@ -42,7 +42,7 @@ const CurrentWeather = () => {
                 </div>
 
                 <div className="text-condition">
-                    <div className="text">{currentWeather.condition?.text}</div>
+                    <div className="text" title="Condition">{currentWeather.condition?.text}</div>
                     <div className="feels-like">Feels like <span className="value">{unit == "c" ? currentWeather.feelslike_c : currentWeather.feelslike_f}°</span></div>
                 </div>
             </section>
@@ -61,7 +61,7 @@ const CurrentWeather = () => {
                 </div>
 
                 <div className="other-condition">
-                    <span className="name">Humdity</span>
+                    <span className="name">Humidity</span>
                     <span className="value">{currentWeather.humidity}%</span>
                 </div>
 

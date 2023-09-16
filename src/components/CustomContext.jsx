@@ -3,10 +3,16 @@ import { createContext, useState } from "react";
 export const MyContext = createContext();
 
 const MyContextProvider = (props) => {
+    const [loading, setLoadingValue] = useState(true);
     const [location, setLocationDetails] = useState({});
     const [currentWeather, setCurrentWeatherDetails] = useState({});
     const [forecast, setForecastDetails] = useState({});
     const [unit, setCurrUnit] = useState("c");
+    const [selectedForecastDateIndex, setSelectedForecastDate] = useState(0);
+
+    const setLoading = (value) => {
+        setLoadingValue(value);
+    }
 
     const setLocation = (obj) => {
         setLocationDetails(obj);
@@ -24,7 +30,11 @@ const MyContextProvider = (props) => {
         setCurrUnit(value);
     }
 
-    const value = { location, setLocation, currentWeather, setCurrentWeather, forecast, setForecast, unit, setUnit };
+    const setSelectedForecastDateIndex = (index)=>{
+        setSelectedForecastDate(index);
+    }
+
+    const value = { loading, setLoading, location, setLocation, currentWeather, setCurrentWeather, forecast, setForecast, unit, setUnit, selectedForecastDateIndex, setSelectedForecastDateIndex };
     return (
         <MyContext.Provider value={value}>
             {props.children}

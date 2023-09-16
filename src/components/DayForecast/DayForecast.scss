@@ -1,0 +1,82 @@
+$back-color: rgba(255, 255, 255, 0.14);
+
+.day-forecast {
+    min-width: 10rem;
+    background-color: rgba(255, 255, 255, 0.07);
+    border-radius: 5px;
+    padding: 15px;
+    box-sizing: border-box;
+    cursor: pointer;
+    transition: 0.3s;
+    position: relative;
+
+    &:hover {
+        background-color: $back-color;
+    }
+
+    .heading {
+        color: rgba(255, 255, 255, 0.7);
+    }
+
+    .details {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .temp-details {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+
+            img {
+                width: 4.5rem;
+            }
+
+            .temp {
+                display: flex;
+                flex-direction: column;
+                font-size: 20px;
+
+                .max {
+                    font-weight: 500;
+                }
+            }
+        }
+
+        .condition-details {
+            display: none;
+            flex-direction: column;
+            gap: 10px;
+
+            .humidity {
+                i {
+                    color: rgba(255, 255, 255, 0.5);
+                }
+            }
+        }
+    }
+}
+
+.selected-day {
+    min-width: 20rem;
+    background-color: $back-color;
+
+    &::after {
+        display: block;
+        content: '';
+        border-width: 8px 6px;
+        border-style: solid;
+        border-color: $back-color transparent transparent transparent;
+        position: absolute;
+        bottom: -16px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 0;
+    }
+
+    .details {
+        .condition-details {
+            display: flex;
+        }
+    }
+}

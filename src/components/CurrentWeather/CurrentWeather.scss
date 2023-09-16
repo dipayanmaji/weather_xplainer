@@ -7,7 +7,6 @@
     flex-direction: column;
     gap: 1.5rem;
     box-shadow: rgba(0, 0, 0, 0.2) 0px 7px 29px 0px;
-    user-select: none;
 
     .top-section {
         display: flex;
@@ -23,10 +22,6 @@
         .name,
         .time {
             font-size: 20px;
-        }
-
-        .location-time {
-            // text-align: right;
         }
     }
 
