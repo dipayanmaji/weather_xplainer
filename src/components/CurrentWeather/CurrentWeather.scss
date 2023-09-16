@@ -1,0 +1,107 @@
+.current-weather {
+    background-color: rgba(255, 255, 255, 0.062);
+    border-radius: 8px;
+    padding: 1rem;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 7px 29px 0px;
+    user-select: none;
+
+    .top-section {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+        justify-content: space-between;
+
+        .heading {
+            font-size: 15px;
+            color: #ffffff80;
+        }
+
+        .name,
+        .time {
+            font-size: 20px;
+        }
+
+        .location-time {
+            // text-align: right;
+        }
+    }
+
+    .middle-section {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        column-gap: 4rem;
+        row-gap: 1.5rem;
+
+        .temp-condition {
+            display: flex;
+            align-items: center;
+
+            img {
+                width: 7rem;
+            }
+
+            .tempreture {
+                display: flex;
+                align-items: center;
+                font-size: 55px;
+
+                .unit-flip {
+                    display: flex;
+                    align-items: center;
+                    flex-direction: column;
+                    gap: 3px;
+
+                    .unit {
+                        font-size: 30px;
+                    }
+
+                    i {
+                        font-size: 12px;
+                        cursor: pointer;
+                    }
+                }
+            }
+
+        }
+
+        .text-condition {
+            .text {
+                font-size: 30px;
+            }
+
+            .feels-like{
+                font-size: 14px;
+            }
+        }
+    }
+
+    .bottom-section {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+        justify-content: space-between;
+
+        .other-condition{
+            display: flex;
+            flex-direction: column;
+
+            .name{
+                color: #ffffff80;
+                font-size: 14px;
+                border-bottom: 1px dotted #ffffff80;
+            }
+            .value{
+                .wind-direction{
+                    display: inline-block;
+                    transition: 0.5s;
+                }
+            }
+        }
+    }
+
+}

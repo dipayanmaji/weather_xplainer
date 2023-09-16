@@ -1,7 +1,12 @@
+*{
+  font-family: Segoe UI, Segoe WP, Arial, Sans-Serif;
+}
 body {
   margin: 0;
-  height: 200vh;
-  background: linear-gradient(rgb(100, 96, 89) 21.15%, rgb(66, 61, 49) 57.81%);
-  background: linear-gradient(rgb(97, 78, 112) 18.76%, rgb(55, 57, 103) 74.35%);
-  background: linear-gradient(rgb(36, 84, 148) 0%, rgb(28, 68, 132) 100%);
+  min-width: 280px;
+  /* height: 200vh; */
+  /* background: linear-gradient(rgb(100, 96, 89) 21.15%, rgb(66, 61, 49) 57.81%); */
+  /* background: linear-gradient(rgb(97, 78, 112) 18.76%, rgb(55, 57, 103) 74.35%); */
+  /* background: linear-gradient(rgb(36, 84, 148) 0%, rgb(28, 68, 132) 100%); */
+  /* background: linear-gradient(rgb(36, 77, 114) 0%, rgb(7, 33, 59) 100%); */
 }

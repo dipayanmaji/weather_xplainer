@@ -1,0 +1,13 @@
+.weather-container {
+    height: 100vh;
+    background: linear-gradient(rgb(36, 77, 114) 0%, rgb(7, 33, 59) 100%);
+    color: #fff;
+    padding: 2rem 0;
+    box-sizing: border-box;
+
+    .weather {
+        width: 95%;
+        max-width: 800px;
+        margin: auto;
+    }
+}
