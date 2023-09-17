@@ -26,28 +26,20 @@ const Header = () => {
         }
     }
 
-    const clearCacheData = () => {
-        caches.keys().then((names) => {
-            console.log(names);
-            names.forEach((name) => {
-                caches.delete(name);
-            });
-        });
-    };
 
     const localWeatherReport = () => {
-        clearCacheData();
         navigator.geolocation.getCurrentPosition((position) => {
             let location = position.coords.latitude + "," + position.coords.longitude;
             apiCall(location);
+            localStorage.setItem("old_user", "true");
         }, err => {
-            // if (err.message === "User denied Geolocation") {
-            //     alert("Allow the location permission from your browser settings, and reload the site once.");
-            // }
-            // else {
-                alert("Turn on location manually from your device settings.");
+            if (localStorage.getItem("old_user")) {
+                alert("Turn on device location, and allow the location permission from your browser settings. Then reload.");
+            }
+            else {
+                alert("Turn on location manually from your device settings, and reload.");
                 // window.location.reload();
-            // }
+            }
             console.log(err);
         })
     }
