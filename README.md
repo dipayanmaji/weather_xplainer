@@ -8,7 +8,7 @@
 
 <h1></h1>
 
-![weather-xplainer-1](https://github.com/dipayanmaji/weather_xplainer/assets/121128467/adce2b72-5159-42df-a075-25ec6458bbc5)
+![weather-xplainer-1](https://github.com/dipayanmaji/weather_xplainer/assets/121128467/13869ac8-503f-4360-b16d-f72527352a5f)
 
 <h1></h1>
 <h1>Features</h1>
@@ -35,4 +35,4 @@
 </ul>
 <h1></h1>
 
-![weather-xplainer-2](https://github.com/dipayanmaji/weather_xplainer/assets/121128467/809ef2db-c917-4685-894f-86936b632eb8)
+![weather-xplainer-2](https://github.com/dipayanmaji/weather_xplainer/assets/121128467/66490a24-880c-4808-82ec-7504e66d9853)
