@@ -6,13 +6,28 @@
     box-sizing: border-box;
     position: relative;
 
-    .loader {
+    .loader,
+    .loader-text {
         width: 5rem;
         margin: auto;
         position: absolute;
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
+    }
+
+    .loader-text {
+        width: 100%;
+        max-width: 20rem;
+        background-color: #ffffff1f;
+        padding: 10px;
+        padding-left: 35px;
+        box-sizing: border-box;
+        border-radius: 5px;
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        line-height: 25px;
     }
 
     .weather {

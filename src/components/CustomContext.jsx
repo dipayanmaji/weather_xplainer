@@ -4,6 +4,7 @@ export const MyContext = createContext();
 
 const MyContextProvider = (props) => {
     const [loading, setLoadingValue] = useState(true);
+    const [loadingText, setLoadingTextValue] = useState(false);
     const [location, setLocationDetails] = useState({});
     const [currentWeather, setCurrentWeatherDetails] = useState({});
     const [forecast, setForecastDetails] = useState({});
@@ -12,6 +13,10 @@ const MyContextProvider = (props) => {
 
     const setLoading = (value) => {
         setLoadingValue(value);
+    }
+
+    const setLoadingText = (value) => {
+        setLoadingTextValue(value);
     }
 
     const setLocation = (obj) => {
@@ -34,7 +39,7 @@ const MyContextProvider = (props) => {
         setSelectedForecastDate(index);
     }
 
-    const value = { loading, setLoading, location, setLocation, currentWeather, setCurrentWeather, forecast, setForecast, unit, setUnit, selectedForecastDateIndex, setSelectedForecastDateIndex };
+    const value = { loading, setLoading, loadingText, setLoadingText, location, setLocation, currentWeather, setCurrentWeather, forecast, setForecast, unit, setUnit, selectedForecastDateIndex, setSelectedForecastDateIndex };
     return (
         <MyContext.Provider value={value}>
             {props.children}
