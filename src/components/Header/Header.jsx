@@ -1,4 +1,4 @@
-import React, { useContext, useEffect } from "react";
+import React, { useContext, useEffect, useRef } from "react";
 import './Header.scss';
 import logo from '../../utilities/images/logo.png';
 import { MyContext } from "../CustomContext";
@@ -7,6 +7,8 @@ import axios from "axios";
 const Header = () => {
     const myContext = useContext(MyContext);
     const { setLoading, setLoadingText, setLocation, setCurrentWeather, setForecast, setSelectedForecastDateIndex, currentWeather } = myContext;
+
+    const inputRef = useRef(null);
 
     const apiCall = async (location) => {
         try {
@@ -39,6 +41,12 @@ const Header = () => {
             localStorage.setItem("old_user", "true");
         }, err => {
             setLoadingText(true);
+            console.log(err);
+            
+            if(err.code === 2){
+                alert("Check your internet connection.");
+                return;
+            }
             if (localStorage.getItem("old_user")) {
                 alert("Turn on location, and allow the location permission from your browser settings. Then reload.");
             }
@@ -47,20 +55,20 @@ const Header = () => {
                 localStorage.setItem("old_user", "true");
                 // window.location.reload();
             }
-            console.log(err);
         })
     }
 
     const locationHandler = (e) => {
         e.preventDefault();
-        const locationName = e.target.location.value;
+        const locationName = inputRef.current.value;
         if (!locationName) {
             alert("Enter a valid location")
             return;
         }
 
         apiCall(locationName);
-        e.target.location.value = "";
+        inputRef.current.value = "";
+        inputRef.current.blur();
     }
 
     useEffect(() => {
@@ -72,7 +80,7 @@ const Header = () => {
             <div className="header">
                 <img className="logo" src={logo} alt="Weather Xplainer" onClick={() => window.location.reload()} />
                 <form onSubmit={locationHandler}>
-                    <input type="text" name="location" id="location-search" placeholder="Search For Location" autoComplete="off" />
+                    <input ref={inputRef} type="text" name="location" id="location-search" placeholder="Search For Location" autoComplete="off" />
                     <button className="search-btn"><i className="fa-solid fa-magnifying-glass-location"></i></button>
 
                     <div className="hint">Search by city/state/country name for better results.</div>

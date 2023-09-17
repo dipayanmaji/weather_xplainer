@@ -14,7 +14,7 @@ const Weather = () => {
             {
                 loadingText ? <ul className="loader-text">
                     <li>Turn on device location.</li>
-                    <li>Allow site's location permission from your browser settings.</li>
+                    <li>Allow location permission from your browser site settings.</li>
                     <li>Reload the site.</li>
                     <li>Or search manually from above search box.</li>
                 </ul> 
