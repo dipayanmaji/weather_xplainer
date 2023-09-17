@@ -28,16 +28,18 @@ const Header = () => {
 
 
     const localWeatherReport = () => {
+        window.history.replaceState(null, null, "/");
         navigator.geolocation.getCurrentPosition((position) => {
             let location = position.coords.latitude + "," + position.coords.longitude;
             apiCall(location);
             localStorage.setItem("old_user", "true");
         }, err => {
             if (localStorage.getItem("old_user")) {
-                alert("Turn on device location, and allow the location permission from your browser settings. Then reload.");
+                alert("Turn on location, and allow the location permission from your browser settings. Then reload.");
             }
             else {
                 alert("Turn on location manually from your device settings, and reload.");
+                localStorage.setItem("old_user", "true");
                 // window.location.reload();
             }
             console.log(err);
