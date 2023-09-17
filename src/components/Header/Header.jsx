@@ -31,7 +31,7 @@ const Header = () => {
             let location = position.coords.latitude + "," + position.coords.longitude;
             apiCall(location);
         }, err => {
-            alert("Turn on your device location.");
+            alert("First turn on your device location.");
             window.location.reload();
             console.log(err);
         })
