@@ -9,6 +9,9 @@ const Footer = () => {
                     Weather Xplainer © 2023<br />
                     created by <a href='https://www.linkedin.com/in/dipayanmaji/' target='_blank' id='creator'>dipayan</a>
                 </div>
+
+                <span className="divider"></span>
+
                 <div className='social-media'>
                     <a href='https://www.linkedin.com/in/dipayanmaji/' target='_blank'><i className="fa-brands fa-linkedin-in"></i></a>
                     <a href='https://github.com/dipayanmaji' target='_blank'><i className="fa-brands fa-github"></i></a>

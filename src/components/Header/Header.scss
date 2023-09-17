@@ -11,8 +11,6 @@ $base-color: #fe9730;
 
     .header {
         margin: auto;
-        // min-height: 3rem;
-        // background-color: red;
         width: 80%;
         display: flex;
         align-items: center;
@@ -22,20 +20,21 @@ $base-color: #fe9730;
 
         .logo {
             width: 8.5rem;
+            cursor: pointer;
         }
 
         form {
+            width: 20rem;
+            height: 2rem;
             border: 2px solid $base-color;
             border-radius: 16px;
-            overflow: hidden;
             display: flex;
-            // align-items: center;
-            // justify-content: center;
             background: $white-color;
+            position: relative;
 
             #location-search {
-                width: 15rem;
-                height: 2rem;
+                width: 90%;
+                height: 100%;
                 padding: 0 8px;
                 box-sizing: border-box;
                 border: none;
@@ -44,8 +43,7 @@ $base-color: #fe9730;
             }
 
             .search-btn {
-                // height: 2rem;
-                // background-color: $white-color;
+                height: 100%;
                 border: none;
                 outline: none;
                 padding: 3px 8px;
@@ -54,6 +52,31 @@ $base-color: #fe9730;
                 color: $base-color;
                 border-radius: 16px;
                 cursor: pointer;
+            }
+
+            .hint {
+                max-width: 12rem;
+                position: absolute;
+                right: 1rem;
+                background-color: $white-color;
+                color: $search-btn;
+                z-index: 1;
+                font-size: 12px;
+                border: 1px solid #e8e8e8;
+                border-radius: 8px;
+                box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+                padding: 8px 5px;
+                box-sizing: border-box;
+                opacity: 0;
+                top: 1rem;
+                transition: opacity .4s ease 0s, top .4s ease 0s;
+            }
+
+            &:hover {
+                .hint {
+                    opacity: 1;
+                    top: 2.5rem;
+                }
             }
         }
     }

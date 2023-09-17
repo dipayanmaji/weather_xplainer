@@ -6,7 +6,7 @@ import axios from "axios";
 
 const Header = () => {
     const myContext = useContext(MyContext);
-    const {setLoading, setLocation, setCurrentWeather, setForecast, setSelectedForecastDateIndex } = myContext;
+    const { setLoading, setLocation, setCurrentWeather, setForecast, setSelectedForecastDateIndex } = myContext;
 
     const apiCall = async (location) => {
         try {
@@ -56,10 +56,12 @@ const Header = () => {
     return (
         <div className="header-container">
             <div className="header">
-                <img className="logo" src={logo} alt="Weather Xplainer" />
+                <img className="logo" src={logo} alt="Weather Xplainer" onClick={() => window.location.reload()} />
                 <form onSubmit={locationHandler}>
                     <input type="text" name="location" id="location-search" placeholder="Search For Location" autoComplete="off" />
                     <button className="search-btn"><i className="fa-solid fa-magnifying-glass-location"></i></button>
+
+                    <div className="hint">Search by city/state/country name for better results.</div>
                 </form>
             </div>
         </div>
