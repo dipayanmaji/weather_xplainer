@@ -41,13 +41,13 @@ const Header = () => {
             let location = position.coords.latitude + "," + position.coords.longitude;
             apiCall(location);
         }, err => {
-            if (err.message === "User denied Geolocation") {
-                alert("Allow the location permission from your browser settings, and reload the site once.");
-            }
-            else {
-                alert("First turn on your location manually from your device settings.");
-                window.location.reload();
-            }
+            // if (err.message === "User denied Geolocation") {
+            //     alert("Allow the location permission from your browser settings, and reload the site once.");
+            // }
+            // else {
+                alert("Turn on location manually from your device settings.");
+                // window.location.reload();
+            // }
             console.log(err);
         })
     }
