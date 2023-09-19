@@ -34,7 +34,6 @@ const Header = () => {
 
 
     const localWeatherReport = () => {
-        window.history.replaceState(null, null, "/");
         navigator.geolocation.getCurrentPosition((position) => {
             let location = position.coords.latitude + "," + position.coords.longitude;
             apiCall(location);

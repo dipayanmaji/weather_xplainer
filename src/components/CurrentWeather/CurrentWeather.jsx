@@ -56,7 +56,7 @@ const CurrentWeather = () => {
                 <div className="other-condition">
                     <span className="name">Wind</span>
                     <span className="value">{unit == "c" ? currentWeather.wind_kph + " km/h" : currentWeather.wind_mph + " m/h"} &nbsp;
-                        <span className="wind-direction" title="Wind Direction" style={{ rotate: `-${currentWeather.wind_degree}deg` }}><svg width="14" height="14" viewBox="0 0 10 14" style={{ rotate: "90deg" }}><path d="M5 0L9.66895 14L5 9.33105L0.331055 14L5 0Z" fill="white"></path></svg></span>
+                        <span className="wind-direction" title="Wind Direction" style={{ rotate: `-${currentWeather.wind_degree}deg` }}><svg width="14" height="14" viewBox="0 0 10 14"><path d="M5 0L9.66895 14L5 9.33105L0.331055 14L5 0Z" fill="white"></path></svg></span>
                     </span>
                 </div>
 
