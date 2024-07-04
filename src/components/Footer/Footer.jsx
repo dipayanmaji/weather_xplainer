@@ -7,7 +7,7 @@ const Footer = () => {
             <div className='footer'>
                 <div className='copyright'>
                     Weather Xplainer © 2023<br />
-                    created by <a href='https://www.linkedin.com/in/dipayanmaji/' target='_blank' id='creator'>dipayan</a>
+                    created by <a href='https://www.linkedin.com/in/dipayanmaji/' target='_blank' id='creator'>DipAYAN</a>
                 </div>
 
                 <span className="divider"></span>
